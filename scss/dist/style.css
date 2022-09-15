@@ -64,11 +64,6 @@ a:active {
   );
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: auto;
-}
-
 header {
   position: fixed;
   top: 1rem;
