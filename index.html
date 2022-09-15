@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sokunmaru's Desk | ToDo</title>
+
+		<link rel="stylesheet" href="./scss/dist/style.css" />
+		<link rel="shortcut icon" href="./favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/80ea5533be.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="menus">
+				<a href="#preview" class="menu-item">
+					<i class="fa-solid fa-music icons"></i>
+				</a>
+				<a href="#contact-id" class="menu-item">
+					<i class="fa-solid fa-book-skull icons"></i>
+				</a>
+				<div class="menu-btns">
+					<i class="fa-solid fa-bars icons" id="nav-btn-open"></i>
+					<i
+						class="fa-solid fa-xmark icons"
+						id="nav-btn-close"
+						style="display: none"
+					></i>
+				</div>
+			</div>
+		</header>
+
+		<!-- ANCHOR *** [CENTER] -->
+		<div class="section-wrapper">
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                           musicPlayer x clock                           -->
+			<!-- ----------------------------------------------------------------------- -->
+			<section class="section section-row" id="preview">
+				<!-- ----------------------------------------------------------------------- -->
+				<!--                             musicPlayer-app                             -->
+				<!-- ----------------------------------------------------------------------- -->
+				<div class="main-left">
+					<div class="app-musicPlayer" id="musicApp">
+						<div class="player">
+							<div class="player__top">
+								<div class="player-cover">
+									<div
+										class="player-cover__item"
+										style="
+											background-image: url('https://cdn.pixabay.com/photo/2012/04/14/14/32/skull-34133_960_720.png');
+										"
+									>
+										<div class="cd-inner"></div>
+									</div>
+									<div class="player-bar"></div>
+								</div>
+								<div
+									id="js-album-infoArtist"
+									class="album__info-artist animate-textClip"
+								></div>
+							</div>
+							<div class="progress" ref="progress">
+								<div class="buttons">
+									<button
+										class="audio-controll-button"
+										id="repeatTrack"
+									>
+										<i class="fa-solid fa-repeat icons"></i>
+									</button>
+									<button
+										class="audio-controll-button"
+										id="backward"
+									>
+										<i
+											class="fa-solid fa-backward-step"
+										></i>
+									</button>
+									<button
+										class="audio-controll-button"
+										id="play"
+									>
+										<i class="fa fa-play icons"></i>
+										<i class="fa fa-pause icons"></i>
+									</button>
+									<button
+										class="audio-controll-button"
+										id="next"
+									>
+										<i
+											class="fa-solid fa-forward-step icons"
+										></i>
+									</button>
+									<button
+										class="audio-controll-button"
+										id="randomTrack"
+									>
+										<i class="fa-solid fa-random icons"></i>
+									</button>
+									<button
+										class="btn-playlist audio-controll-button"
+									>
+										<i
+											class="fa-solid fa-sliders icons"
+										></i>
+										<!-- <i class="fa-solid fa-bars icons"></i> -->
+										<i class="fa-solid fa-xmark icons"></i>
+									</button>
+								</div>
+								<input
+									id="js-audioRange"
+									type="range"
+									value="0"
+									step="1"
+									min="0"
+									max="100"
+								/>
+								<div
+									id="js-album-infoName"
+									class="album__info-name animate-textClip"
+								></div>
+								<div class="album-info"></div>
+								<audio
+									id="audio"
+									src="assets/audio/5.mp3"
+								></audio>
+							</div>
+						</div>
+						<div class="dashboard curved">
+							<div class="playlist"></div>
+						</div>
+					</div>
+				</div>
+				<!-- ----------------------------------------------------------------------- -->
+				<!--                                clock-app                                -->
+				<!-- ----------------------------------------------------------------------- -->
+				<div class="main-right">
+					<div class="app-todo" id="todoApp">
+						<h1>TodoList <span class="sumTo"></span></h1>
+						<p>
+							<span>
+								<strong>Click</strong> to complete task -
+							</span>
+							<span>
+								<strong>Right Click</strong> to delete task
+							</span>
+						</p>
+						<div class="todoApp">
+							<form
+								id="form-1"
+								onsubmit="createTodo()"
+								class="todoApp-container"
+							>
+								<div class="todoList"></div>
+								<input
+									id="inputText"
+									type="text"
+									placeholder="Todo..."
+								/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ----------------------------------------------------------------------- -->
+			<!--                                [FOOTER]                                 -->
+			<!-- ----------------------------------------------------------------------- -->
+			<section class="section">
+				<div class="socialBar" id="contact-id">
+					<div class="socialBar-top">
+						<p>Contact</p>
+						<h3 class="email">sr.dragonfang@hotmail.com</h3>
+					</div>
+					<div class="socialBar-bottom">
+						<div class="socialBar-bottom-info">
+							<p class="socialBar-logo">
+								Sokunmaru Group | Copyright &copy; 2022
+							</p>
+							<p>
+								Image Source:
+								<span>
+									Grafit Studio
+									<a
+										href="https://www.artstation.com/artwork/DABWJn"
+										alt="image url"
+										><i class="fa-solid fa-link"></i
+									></a>
+								</span>
+							</p>
+							<p>
+								developed by
+								<strong class="credits-author"
+									>S.R Dragonfang</strong
+								>
+							</p>
+						</div>
+						<div class="socialBar-list">
+							<div class="socialBar-item">
+								<a href="www.github.com/srdragonfang">github</a>
+							</div>
+							<div class="socialBar-item">
+								<a href="www.instagram.com/srdragonfang"
+									>instagram</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ANCHOR *** [SCRIPT] -->
+		<script src="js/script.js"></script>
+		<script src="js/appMusicPlayer.js"></script>
+		<script src="js/appTodo.js"></script>
+	</body>
+</html>
